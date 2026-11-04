@@ -1,3 +1,16 @@
-.vscode
-__pycache__
-*.pyc
+# VS Code
+.vscode/
+
+# Python 快取
+__pycache__/
+*.py[cod]
+
+# Python 虛擬環境
+venv/
+.venv/
+
+# 環境設定與私密資料
+.env
+
+# SQLite 暫存檔
+*.db-journal
