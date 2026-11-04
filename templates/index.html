@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>玩家資料查詢</title>
+  </head>
+  <body>
+    <h1>玩家資料查詢</h1>
+
+    <div id="search-area">
+      <h2>查詢玩家</h2>
+      <label for="player-id">輸入玩家ID</label>
+      <input id="player-id" type="text" placeholder="例如：12345" />
+      <p>或是</p>
+      <label for="player-name">玩家名稱</label>
+      <input id="player-name" type="text" placeholder="例如：Alex" />
+      <br /><br />
+      <button id="search" class="button1">查詢</button>
+      <p class="hint1">提示：會優先以<b class="highlight">ID</b>來查詢</p>
+    </div>
+    <div id="filter-area">
+      <h2>篩選玩家</h2>
+
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="level-min">最低等級</label>
+          <input id="level-min" type="number" placeholder="最小值" />
+        </div>
+
+        <div class="filter-group">
+          <label for="level-max">最高等級</label>
+          <input id="level-max" type="number" placeholder="最大值" />
+        </div>
+
+        <div class="filter-group">
+          <label for="score-min">最低分數</label>
+          <input id="score-min" type="number" placeholder="最小值" />
+        </div>
+
+        <div class="filter-group">
+          <label for="score-max">最高分數</label>
+          <input id="score-max" type="number" placeholder="最大值" />
+        </div>
+      </div>
+
+      <button id="filter" class="button1">篩選</button>
+    </div>
+    <div id="result-area">
+      <h2>搜尋結果</h2>
+      <p id="no-search">未搜尋</p>
+    </div>
+    <script src="../static/script.js"></script>
+  </body>
+</html>

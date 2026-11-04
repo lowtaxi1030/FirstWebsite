@@ -1,0 +1,193 @@
+/* ===== 0. 全域顏色設定 ===== */
+:root {
+  /* 背景 */
+  --bg-main: #171c2b;
+  --bg-card: #222a3d;
+
+  /* 文字 */
+  --text-main: #c8b6f0;
+  --text-light: #ffffff;
+  --text-dark: #120037;
+  --text-muted: #a0a0a0;
+
+  /* 漸層色 */
+  --color-blue: #55d6ff;
+  --color-purple: #8175ff;
+  --color-pink: #b77aff;
+
+  /* 其他強調色 */
+  --color-green: #7e01d8;
+  --color-teal: #00635d;
+
+  /* 按鈕 */
+  --button-bg: #ffc670;
+  --button-hover: #500089;
+  --button-active: #2e3cff;
+
+  /* 分隔線 */
+  --divider-color: #70c8ff;
+}
+
+/* ===== 1. 網頁整體 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ===== 2. 搜尋區域 ===== */
+#search-area {
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(
+        90deg,
+        var(--color-blue),
+        var(--color-purple),
+        var(--color-pink)
+      )
+      border-box;
+
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#search-area h2 {
+  margin-top: 0;
+}
+
+/* ===== 3. 篩選區域 ===== */
+#filter-area {
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(
+        90deg,
+        var(--color-purple),
+        var(--color-pink),
+        var(--color-blue)
+      )
+      border-box;
+
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 25px auto;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(180deg, var(--color-green), var(--color-teal)) border-box;
+
+  padding: 15px;
+}
+
+/* ===== 4. 搜尋結果區域 ===== */
+#result-area {
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(90deg, var(--color-blue), var(--color-purple)) border-box;
+
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#result-area h2 {
+  margin-top: 0;
+}
+
+/* ===== 5. 玩家資料卡片 ===== */
+.player-card {
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(90deg, var(--color-pink), var(--color-purple)) border-box;
+
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* ===== 6. 共用樣式 ===== */
+.hint1 {
+  font-size: 14px;
+}
+
+.hint2 {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.highlight {
+  color: var(--color-blue);
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: var(--divider-color);
+  width: 90%;
+  margin: 24px auto;
+}
+
+/* ===== 7. 按鈕 ===== */
+.button1 {
+  color: var(--text-dark);
+  background-color: var(--button-bg);
+
+  font-size: 16px;
+  padding: 10px 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button1:hover {
+  color: var(--text-light);
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.button1:active {
+  color: var(--text-light);
+  background-color: var(--button-active);
+  transform: scale(0.95);
+}
+
+.button1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
