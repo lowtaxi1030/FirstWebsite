@@ -117,6 +117,6 @@ def validate_filter_parameters(min_level: int | None, max_level: int | None, min
     return True, ""
 
 
+initialize_database()
 if __name__ == "__main__":
-    initialize_database()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)

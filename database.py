@@ -1,8 +1,10 @@
 import sqlite3
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
 
 def get_connection() -> sqlite3.Connection:
-    return sqlite3.connect("players.db")
+    return sqlite3.connect(BASE_DIR / "players.db")
 
 
 def initialize_database():
